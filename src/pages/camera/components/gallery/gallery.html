@@ -1,0 +1,17 @@
+<div class="gallery_contain">
+  <!-- <button ion-button block (click)="getPhoto()">
+          <ion-icon name="camera"></ion-icon>
+          &nbsp; Get photo
+        </button> -->
+  <ion-grid>
+    <ion-row>
+      
+        <ion-col col-4 *ngFor="let item of photos">
+          <ion-card (click)="writePost(item)">
+            <img [src]="item?.thumbnailURL | cdvphotolibrary" *ngIf="item" />
+          </ion-card>
+        </ion-col>
+        
+    </ion-row>
+  </ion-grid>
+</div>

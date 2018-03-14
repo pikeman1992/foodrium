@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-segment color="dark" class="header_tabs" [(ngModel)]="notify_child">
+      <ion-segment-button value="you">
+        You
+      </ion-segment-button>
+      <ion-segment-button value="following">
+        Following
+      </ion-segment-button>
+    </ion-segment>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div [ngSwitch]="notify_child">
+    <div *ngSwitchCase="'you'">
+      <page-notify-you></page-notify-you>
+    </div>
+    <div *ngSwitchCase="'following'">
+      <page-notify-following></page-notify-following>
+    </div>
+  </div>
+</ion-content>

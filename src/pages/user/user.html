@@ -1,0 +1,104 @@
+<ion-header>
+	<ion-toolbar>
+		<div style="display:flex; justify-content:space-between;">
+			<div class="header_right">
+				<button ion-button clear color="dark">
+					<!-- {{profileInfo?.username}} -->
+					miule1992
+					<ion-icon name="arrow-dropdown"></ion-icon>
+
+				</button>
+			</div>
+			<div class="header_left">
+				<ion-buttons start>
+					<button ion-button icon-only color="dark" (click)="getInfo()">
+						<ion-icon name="timer"></ion-icon>
+					</button>
+					<button ion-button icon-only color="dark">
+						<ion-icon name="person-add"></ion-icon>
+					</button>
+					<button ion-button icon-only color="dark" (click)="logout()">
+						<ion-icon name="more"></ion-icon>
+					</button>
+				</ion-buttons>
+			</div>
+		</div>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<div class="myacc_info">
+		<ion-grid>
+			<ion-row>
+				<ion-col col-4>
+					<div id="info_avatar">
+						<ion-avatar>
+							<img [src]="cdnURL + profileInfo?.avatar">
+						</ion-avatar>
+					</div>
+					<div id="info_name">
+						<span>Miu Lê</span>
+					</div>
+				</ion-col>
+				<ion-col align-self-center>
+					<ion-row>
+						<ion-col col-sm-4>
+							<div id="info_content_col">
+								<div id="col_ct_1">45</div>
+								<div id="col_ct_2">Posts</div>
+							</div>
+						</ion-col>
+						<ion-col col-sm-4>
+							<div id="info_content_col">
+								<div id="col_ct_1">120</div>
+								<div id="col_ct_2">Followers</div>
+							</div>
+						</ion-col>
+						<ion-col col-sm-4>
+							<div id="info_content_col">
+								<div id="col_ct_1">230</div>
+								<div id="col_ct_2">Following</div>
+							</div>
+						</ion-col>
+					</ion-row>
+					<ion-row>
+						<div id="button_cen">
+							<button (click)="openEditUser()" ion-button color="notsodark" outline>
+								Edit your profile
+							</button>
+						</div>
+					</ion-row>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div class="myacc_pic">
+		<div id="myacc_pic_selector">
+			<ion-segment color="dark" [(ngModel)]="profile_child">
+				<ion-segment-button value="pic">
+					<ion-icon name="apps"></ion-icon>
+				</ion-segment-button>
+				<ion-segment-button value="post">
+					<ion-icon name="list"></ion-icon>
+				</ion-segment-button>
+				<ion-segment-button value="picinpost">
+					<ion-icon name="pricetag"></ion-icon>
+				</ion-segment-button>
+				<ion-segment-button value="bookmarks" [navPush]="bookmarkspage">
+					<ion-icon name="bookmark"></ion-icon>
+				</ion-segment-button>
+			</ion-segment>
+		</div>
+		<div [ngSwitch]="profile_child">
+			<div *ngSwitchCase="'pic'">
+				<page-mypic></page-mypic>
+			</div>
+			<div *ngSwitchCase="'post'">
+				<page-mypost></page-mypost>
+			</div>
+			<div *ngSwitchCase="'picinpost'">
+				<page-mypicinpost></page-mypicinpost>
+			</div>
+		</div>
+
+	</div>
+</ion-content>

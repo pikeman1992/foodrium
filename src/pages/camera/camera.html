@@ -1,0 +1,28 @@
+<ion-header>
+	<ion-navbar>
+		<ion-segment color="dark" class="header_tabs" [(ngModel)]="cam_child">
+			<ion-segment-button value="video">
+				Video
+			</ion-segment-button>
+			<ion-segment-button value="camera">
+				Camera
+			</ion-segment-button>
+			<ion-segment-button value="gallery">
+				Gallery
+			</ion-segment-button>
+		</ion-segment>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<div [ngSwitch]="cam_child">
+		<div *ngSwitchCase="'video'">
+			hehehe
+		</div>
+		<div *ngSwitchCase="'camera'">
+			<page-take-photo></page-take-photo>
+		</div>
+		<div *ngSwitchCase="'gallery'">
+			<page-gallery [photos]="photos"></page-gallery>
+		</div>
+	</div>
+</ion-content>

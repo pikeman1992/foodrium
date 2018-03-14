@@ -1,0 +1,24 @@
+page-notify-you{
+  .item-md.item-block .item-inner{
+    border-bottom: none;
+  }
+  .notify-you-container{
+    &__param{
+      display: flex;
+      flex-direction: column;
+      word-wrap: break-word;
+      white-space: initial;
+      &__content{
+        P{
+          color:black;
+        }
+      }
+      &__time{
+        color:#8B8787;
+        font-size: 80%;
+      }
+    }
+  }
+
+  
+}

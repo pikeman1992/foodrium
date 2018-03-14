@@ -1,0 +1,45 @@
+page-write-post{
+  .header{
+    //background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    ion-icon{
+      font-size:40px;
+      //background-color: aqua;
+    }
+    &__share-button{
+      font-size: 150%;
+      font-weight: 400;
+      color:blue;
+      //background-color: burlywood;
+    }
+  }
+
+  .content{
+    #text-place{
+    }
+    textarea {
+      resize: none;
+      height: 50px;
+    }
+    &__box{
+      padding-left: unset;
+      .item-inner{
+        padding:unset !important;
+      }
+    }
+    &__location{
+      padding-left: unset;
+    }
+    #searchbar{
+      margin-top: 10px;
+      padding-left:unset !important;
+      padding-right:unset !important;
+    }
+  }
+
+}

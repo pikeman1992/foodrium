@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Your Bookmarks
+    </ion-title>
+  </ion-navbar>
+  <ion-segment color="dark" class="header_tabs" [(ngModel)]="bookmarks_child">
+    <ion-segment-button value="recently">
+      Recently
+    </ion-segment-button>
+    <ion-segment-button value="collections">
+      Collections
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="bookmarks_child">
+    <div *ngSwitchCase="'recently'">
+      <page-recently></page-recently>
+    </div>
+    <div *ngSwitchCase="'collections'">
+      <page-collections></page-collections>
+    </div>
+  </div>
+</ion-content>

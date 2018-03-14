@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <div class="edit-user-header">
+      <ion-icon (click)="onBack()" name="arrow-back"></ion-icon>
+      <div class="edit-user-header__title">
+        Edit your Profile
+      </div>
+    </div>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div style="display:flex; justify-content:center;">
+      <div id="info_avatar">
+        <ion-avatar>
+          <img [src]="cdnURL + userData?.avatar">
+        </ion-avatar>
+      </div>
+    </div>
+    <div id="edit_avatar">Change Avatar</div>
+    <!-- <p>Form value: {{ userForm.value | json }}</p>
+    <p>Data : {{userData?.username}}</p> -->
+    <div id="edit_infomation">
+
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" formControlName="fullName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" formControlName="userName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Website</ion-label>
+        <ion-input type="text" formControlName="website"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Bio</ion-label>
+        <ion-input type="text" formControlName="bio"></ion-input>
+      </ion-item>
+
+    </div>
+    <div id="edit_privateinfo_title">Private Infomation</div>
+
+    <div id="edit_infomation">
+
+      <ion-item>
+        <ion-label floating>E-mail Address (read only)</ion-label>
+        <ion-input disabled type="text" [value]="userData?.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Phone number</ion-label>
+        <ion-input type="text" formControlName="phoneNumber"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select interface="action-sheet" formControlName="gender">
+          <ion-option value="MALE">Male</ion-option>
+          <ion-option value="FEMALE">Female</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </div>
+    <div style="height:40px;"></div>
+    <button ion-button color="theme" block round type="submit">Save</button>
+  </form>
+  <div style="height:40px;"></div>
+</ion-content>

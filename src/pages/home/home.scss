@@ -1,0 +1,29 @@
+page-home {
+  #food_img img{
+    width: 100%;
+  }
+  .home-icon{
+    height: 40px;
+    //background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right:10px;
+    &__left {
+      //background-color: aqua;
+      display:flex;
+      img{
+        margin-right:15px;
+      }
+    }
+    &__right{
+      //background-color: blueviolet;
+      display: flex;
+    }
+  }
+  #card_chatbox ion-item{
+    background-color: rgba(211, 211, 211, 0.33);
+  }
+
+}
+

@@ -1,0 +1,36 @@
+<div class="container__card" *ngIf="post?.user?.avatar">
+  <div id="cardowner_info">
+    <ion-item>
+      <ion-avatar item-start>
+        <img [src]="cdnURL + post?.user?.avatar">
+      </ion-avatar>
+      <h2>{{post?.user?.username}}</h2>
+      <p>{{post?.location}}</p>
+    </ion-item>
+  </div>
+  <div id="food_img">
+    <img [src]="cdnURL + post?.source[0]" />
+  </div>
+  <ion-card-content class="container__card__title">
+    {{post?.description}}
+  </ion-card-content>
+  <div class="home-icon">
+    <div class="home-icon__left">
+      <img class="flaticon like-button" src="assets/icon/like.svg" />
+      <img class="flaticon" [navPush]="commentPage" src="assets/icon/speech-bubble-outline-of-rectangular-shape.svg" />
+      <img class="flaticon" src="assets/icon/paper-plane.svg" />
+    </div>
+    <div class="home-icon__right">
+      <img class="flaticon" src="assets/icon/bookmark.svg" />
+    </div>
+  </div>
+  <div id="card_chatbox" [navPush]="commentPage">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/avatar1.png">
+      </ion-avatar>
+      <h2>ahihi</h2>
+      <p>ahihi</p>
+    </ion-item>
+  </div>
+</div>

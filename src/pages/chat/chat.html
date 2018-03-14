@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col col-10>
+          <ion-searchbar></ion-searchbar>
+        </ion-col>
+
+        <ion-col>
+          <div id="info_avatar">
+            <ion-avatar>
+              <img src="assets/img/miule.png">
+            </ion-avatar>
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+  <ion-segment color="dark" class="chat_tabs" [(ngModel)]="chatChild">
+    <ion-segment-button value="messages">
+      Messages
+    </ion-segment-button>
+    <ion-segment-button value="group">
+      Group (5)
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="chatChild">
+    <div *ngSwitchCase="'messages'">
+      <page-messages></page-messages>
+    </div>
+    <div *ngSwitchCase="'group'">
+      <page-groupchat></page-groupchat>
+    </div>
+  </div>
+
+</ion-content>

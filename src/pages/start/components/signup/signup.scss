@@ -1,0 +1,58 @@
+page-signup {
+
+  #header{
+    //background-color: blueviolet;
+    ion-icon{
+      font-size:40px;
+    }
+  }
+
+  #container{
+    overflow: hidden;
+    margin-right:8%;
+    margin-left:8%;
+    h1{
+      font-size: 25px;
+      margin-top: 10px;
+      
+    }
+    .title{
+      color:#C2C2C2;
+    }
+
+  }
+
+  #sign_up{
+    //background-color: lightcyan;
+    overflow: hidden;
+    h1{
+      font-size: 20px;
+      
+    }
+    &__number{
+      //background-color: aquamarine;
+      font-size: 80px;
+      color:#EAEAEA;
+    }
+    &__fab{
+      display:flex;
+      margin-bottom: 5%;
+      margin-top:3%;
+      button{
+        font-size: 100%;
+        height:40px;
+        width:40px;
+        margin-left: 5px;
+      }
+    }
+    &__content{
+      //background-color: bisque;
+      ion-item{
+        padding-left:unset;
+      }
+      button{
+        width: 40%;
+      }
+    }
+  }
+}

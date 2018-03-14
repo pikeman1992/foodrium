@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-segment color="dark" class="header_tabs" [(ngModel)]="home_child">
+      <ion-segment-button value="latest">
+        Latest
+      </ion-segment-button>
+      <ion-segment-button value="explore">
+        Explore
+      </ion-segment-button>
+      <ion-segment-button value="around">
+        Around
+      </ion-segment-button>
+    </ion-segment>
+  </ion-navbar>
+</ion-header>
+<ion-content class="cards-bg">
+  <div [ngSwitch]="home_child">
+    <div *ngSwitchCase="'latest'">
+      <page-latest></page-latest>
+    </div>
+    <div *ngSwitchCase="'explore'">
+      <page-explore></page-explore>
+    </div>
+    <div *ngSwitchCase="'around'">
+      <page-around></page-around>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-content>
+  <div id="welcome">
+    <div id="welcome__number">
+      01
+    </div>
+    <h1>Welcome to Foodrium</h1>
+    <div class="title">The 1st mobile application in the world</div>
+    <div class="infor">WoW...Amazing...Incredible</div>
+    <div id="login">
+      <div id="login__fab">
+        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+      </div>
+      <div id="login__content">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+          <ion-list>
+
+            <ion-item>
+              <ion-label floating>Email</ion-label>
+              <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+          </ion-list>
+          <button ion-button color="theme" round type="submit">Login</button>
+        </form>
+
+        <!--<p [hidden]="!(loading$ | async)?.loading">Loading...</p>-->
+        <!--<p>{{(loading$ | async)?.error?.message}}</p>-->
+        <!--<p>{{(error$ | async)?.message}}</p>-->
+      </div>
+    </div>
+    <div id="sign_up_content">
+      Don't have account yet ?<strong [navPush]="signUpPage"> Sign up </strong> for free
+    </div>
+    <div id="forgot_password_content">
+      Forgot your password ? <strong [navPush]="forgotPasswordPage">Click here</strong>
+    </div>
+  </div>
+</ion-content>

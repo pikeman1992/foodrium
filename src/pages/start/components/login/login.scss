@@ -1,0 +1,86 @@
+page-login{
+  .item item-block item-ios item-input item-label-floating{
+    border-top: unset;
+  }
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+    border-bottom: unset;
+  }
+  #welcome{
+    overflow: hidden;
+    margin-right:8%;
+    margin-left:8%;
+    h1{
+      font-size: 30px;
+      margin-top: 10px;
+      
+    }
+    .title{
+      color:#C2C2C2;
+    }
+    .infor{
+      margin-top: 1px;
+      color:#C2C2C2;
+    }
+    &__number{
+      //background-color: aquamarine;
+      font-size: 80px;
+      margin-top: 5%;
+      color:#EAEAEA;
+    }
+
+  }
+
+  #login{
+    //background-color: lightcyan;
+    overflow: hidden;
+    h1{
+      font-size: 20px;
+      
+    }
+    &__number{
+      //background-color: aquamarine;
+      font-size: 80px;
+      color:#EAEAEA;
+    }
+    &__fab{
+      display:flex;
+      margin-bottom: 5%;
+      margin-top:3%;
+      button{
+        font-size: 100%;
+        height:40px;
+        width:40px;
+        margin-left: 5px;
+      }
+    }
+    &__content{
+      //background-color: bisque;
+      ion-item{
+        padding-left:unset;
+      }
+      ion-checkbox{
+        margin-right:5px;
+      }
+      button{
+        width: 40%;
+      }
+    }
+  }
+
+  #sign_up_content{
+    //background-color: aqua;
+    margin-top: 10px;
+    font-size:105%;
+    strong{
+      color: #FB6C6B;
+    }
+  }
+
+  #forgot_password_content{
+    margin-top: 5px;
+    font-size:105%;
+    strong{
+      color: #FB6C6B;
+    }
+  }
+}

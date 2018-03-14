@@ -1,0 +1,32 @@
+<div class="container__stories">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="container__stories--title">Stories</ion-col>
+      <ion-col class="container__stories--watchall">
+        Watch All
+      </ion-col>
+    </ion-row>
+    <ion-row>
+
+      <div class="scroller">
+        <div class="wrapper">
+          <ul class="content">
+
+            <li *ngFor="let item of latestList">
+              <div class="container__stories__user">
+                <div class="container__stories__user--avatar">
+                  <img src="assets/img/avatar1.png">
+                </div>
+                <div class="container__stories__user--name">
+                  Miu Lê
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    </ion-row>
+  </ion-grid>
+</div>

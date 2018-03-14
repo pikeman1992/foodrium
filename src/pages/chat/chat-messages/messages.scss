@@ -1,0 +1,19 @@
+page-messages{
+  .item-inner{
+    border-bottom:unset !important;
+  }
+  #messbox_times{
+  }
+  #messbox_seen{
+    padding-top: 3%;
+    color:gray;
+  }
+  .messbox_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mess_grid ion-item{
+    padding-left:unset;
+  }
+}

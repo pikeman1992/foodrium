@@ -1,0 +1,26 @@
+<ion-content>
+	<form [formGroup]="postForm" (ngSubmit)="onSubmit()" novalidate>
+
+		<div padding class="header">
+			<ion-icon (click)="onBack()" name="arrow-back"></ion-icon>
+			<div class="header__share-button">
+				Share your post
+			</div>
+		</div>
+		<div padding class="content">
+			<ion-card>
+				<img [src]="selectedImage?.thumbnailURL | cdvphotolibrary"/>
+			</ion-card>
+			<ion-item class="content__box">
+				<ion-textarea formControlName="description" id="text-place" placeholder="Write your description">
+				</ion-textarea>
+			</ion-item>
+			<ion-item class="content__location">
+				<ion-input formControlName="location" placeholder="Add Location"></ion-input>
+			</ion-item>
+			<!--<ion-searchbar id="search-bar" placeholder="Tag People"></ion-searchbar>-->
+
+			<button block ion-button color="theme" round type="submit">Submit</button>
+		</div>
+	</form>
+</ion-content>

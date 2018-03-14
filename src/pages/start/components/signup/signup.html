@@ -1,0 +1,40 @@
+<ion-content>
+  <div padding id="header">
+    <ion-icon navPop name="arrow-back"></ion-icon>
+  </div>
+  <div id="container">
+    <h1>Tell us a little about yourself</h1>
+    <div class="title">This won't take too long</div>
+    <div id="sign_up">
+      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" novalidate>
+        <div id="sign_up__content">
+          <ion-list>
+
+            <ion-item>
+              <ion-label floating>Your username</ion-label>
+              <ion-input type="text" formControlName="username"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label floating>Your email</ion-label>
+              <ion-input type="email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label floating>Your password</ion-label>
+              <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label floating>Confirm your password</ion-label>
+              <ion-input type="password" formControlName="confirmPassword"></ion-input>
+            </ion-item>
+            <div color="danger" *ngIf="signUpForm.controls.confirmPassword.errors?.MatchPassword">Password not match</div>
+
+          </ion-list>
+          <button ion-button color="theme" round type="submit">Sign up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

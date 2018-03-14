@@ -1,0 +1,28 @@
+page-messages-detail{
+  .mess-detail{
+    display: flex;
+    flex-direction: column;
+  }
+  #detail-active{
+    font-size: 85%;
+  }
+  #detail-name{
+    font-size: 120%;
+  }
+  .mess-iconhead{
+    padding-right: unset;
+  }
+  #text-place{
+    border-radius: 15px;
+  }
+  textarea {
+    resize: none;
+    height: 20px;
+  }
+  .item-md{
+    padding-left:unset;
+  }
+  .item-md.item-block .item-inner{
+    padding-right: unset;
+  }
+}

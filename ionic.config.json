@@ -1,0 +1,8 @@
+{
+  "name": "foodrium",
+  "app_id": "bc75af99",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

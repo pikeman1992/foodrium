@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Comments
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="cmt-detail-contain">
+
+  <ion-item *ngFor="let item of list" class="cmt-detail-contain__box">
+    <ion-avatar class="cmt-detail-contain__box__avatar" item-start>
+      <img src="assets/img/avatar1.png">
+    </ion-avatar>
+    <div class="cmt-detail-contain__box__name">
+      Supergirl</div>
+    <div class="cmt-detail-contain__box__cmt">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus facilis ad saepe impedit eaque est delectus quidem
+        enim eveniet id.</p>
+    </div>
+    <div class="cmt-detail-contain__box__startday">
+      <p>1 hour ago</p>
+    </div>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer class="comment-section">
+  <div class="comment-section__comment">
+    <ion-item>
+      <ion-textarea id="text-place" placeholder="Enter your comments"></ion-textarea>
+    </ion-item>
+  </div>
+  <div text-center class="comment-section__icon">
+    <button ion-button icon-only color="light">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </div>
+</ion-footer>
